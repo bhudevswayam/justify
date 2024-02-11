@@ -23,6 +23,7 @@ function App() {
   return <>
       <BrowserRouter>
       <Routes>
+          <Route path='/' element={<Login />} />
           <Route path='/test' element={<Home />} />
           <Route path="/compiler" element={<Compiler />} />
           <Route path="/question" element={<Protected Component={Question} />} />
