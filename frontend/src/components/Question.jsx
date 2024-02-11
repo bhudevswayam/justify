@@ -15,7 +15,7 @@ const Question = () => {
   const adminId = localStorage.getItem('adminId')
   const uploadQuestion = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/upload-question', {
+      const response = await axios.post('https://apptest-88ck.onrender.com/upload-question', {
         title,
         question,
         testCases,

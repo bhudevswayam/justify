@@ -8,7 +8,7 @@ const AdminDetails = () => {
   useEffect(() => {
     const fetchAdminDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/admin', {
+        const response = await axios.get('https://apptest-88ck.onrender.com/admin', {
           headers: {
             Authorization: 'Bearer ' + localStorage.getItem('token'), // Assuming you store the JWT token in localStorage
           },

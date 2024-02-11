@@ -14,7 +14,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:3000/login";
+			const url = "https://apptest-88ck.onrender.com/login";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			localStorage.setItem("adminId", res.adminId)

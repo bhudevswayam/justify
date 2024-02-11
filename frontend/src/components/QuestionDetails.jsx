@@ -10,7 +10,7 @@ const QuestionDetails = ({ match }) => {
   useEffect(() => {
     const fetchQuestionDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/get-question/${questionId}`);
+        const response = await axios.get(`https://apptest-88ck.onrender.com/get-question/${questionId}`);
         setQuestion(response.data);
       } catch (error) {
         console.error('Error fetching question details:', error.message);

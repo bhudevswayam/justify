@@ -16,7 +16,7 @@ const UserDetails = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users-detail/${userId}`);
+        const response = await axios.get(`https://apptest-88ck.onrender.com/users-detail/${userId}`);
         setUserDetails(response.data);
       } catch (error) {
         console.error('Error fetching user details:', error.message);
@@ -48,7 +48,7 @@ const UserDetails = () => {
   useEffect(() => {
     const handleQuestionClick = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/get-question/${userDetails?.givenQuestion}`);
+        const response = await axios.get(`https://apptest-88ck.onrender.com/get-question/${userDetails?.givenQuestion}`);
         setSelectedQuestion(response.data);
       } catch (error) {
         console.error('Error fetching question:', error.message);

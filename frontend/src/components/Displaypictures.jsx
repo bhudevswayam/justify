@@ -9,7 +9,7 @@ const Displaypicture = ({userId}) => {
   useEffect(() => {
     const fetchPictures = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/get-pictures/${userId}`, { responseType: 'json' });
+        const response = await axios.get(`https://apptest-88ck.onrender.com/get-pictures/${userId}`, { responseType: 'json' });
 
         console.log('Response data:', response.data);
 

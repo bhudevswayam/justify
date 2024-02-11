@@ -29,7 +29,7 @@ function Compiler() {
         const urlParams = new URLSearchParams(window.location.search)
         const questionid = urlParams.get('questionId')
         const response = await axios.get(
-          `http://localhost:3000/get-question/${questionid}`,
+          `https://apptest-88ck.onrender.com/get-question/${questionid}`,
         )
 
         if (!response.data) {
@@ -110,7 +110,7 @@ function Compiler() {
 
   const submitCode = async () => {
     try {
-      const response = await fetch('http://localhost:3000/compile', {
+      const response = await fetch('https://apptest-88ck.onrender.com/compile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ function Compiler() {
         }
 
         try {
-          const response = await fetch('http://localhost:3000/compile', {
+          const response = await fetch('https://apptest-88ck.onrender.com/compile', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -238,7 +238,7 @@ function Compiler() {
 
       // Send the formData to the server
       const response = await axios.post(
-        `http://localhost:3000/save-pictures/${userId}`,
+        `https://apptest-88ck.onrender.com/save-pictures/${userId}`,
         formData,
         {
           headers: {
@@ -297,7 +297,7 @@ function Compiler() {
 
           // Send a request to update the tabChange field
           const response = await fetch(
-            'http://localhost:3000/update-tab-change',
+            'https://apptest-88ck.onrender.com/update-tab-change',
             {
               method: 'POST',
               headers: {
@@ -331,7 +331,7 @@ function Compiler() {
       runTestCases()
     }
     try {
-      const response = await fetch('http://localhost:3000/submit', {
+      const response = await fetch('https://apptest-88ck.onrender.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

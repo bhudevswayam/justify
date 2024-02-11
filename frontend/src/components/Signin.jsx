@@ -22,7 +22,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:3000/register-company";
+			const url = "https://apptest-88ck.onrender.com/register-company";
 			const { data: res } = await axios.post(url, data);
 			navigate("/s-admin");
 			console.log(res.message);

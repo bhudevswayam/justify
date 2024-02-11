@@ -14,7 +14,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchQuestionTitles = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/questions/titles/${adminUserId}`);
+        const response = await axios.get(`https://apptest-88ck.onrender.com/questions/titles/${adminUserId}`);
         setQuestionTitles(response.data);
       } catch (error) {
         console.error('Error fetching question titles:', error.message);
@@ -27,7 +27,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchAdmin = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/admin-details/${adminUserId}`);
+        const response = await axios.get(`https://apptest-88ck.onrender.com/admin-details/${adminUserId}`);
         setAdmin(response.data);
         setProfileImgTrim(response.data)
       } catch (error) {
@@ -41,7 +41,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users/${adminUserId}`)
+        const response = await axios.get(`https://apptest-88ck.onrender.com/users/${adminUserId}`)
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error.message);
@@ -61,7 +61,7 @@ const Admin = () => {
 
   const handleQuestionClick = async (questionId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/get-question/${questionId}`);
+      const response = await axios.get(`https://apptest-88ck.onrender.com/get-question/${questionId}`);
       setSelectedQuestion(response.data);
       setDisplayExams(false); // Set to false when a question is clicked
     } catch (error) {

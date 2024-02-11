@@ -40,7 +40,7 @@ const Home = () => {
         e.preventDefault();
       
         try {
-          const response = await axios.post('http://localhost:3000/register', formData);
+          const response = await axios.post('https://apptest-88ck.onrender.com/register', formData);
       
           // Handle the response as needed (e.g., show a success message)
           console.log('User registered successfully:', response.data);
