@@ -34,6 +34,7 @@ function App() {
           <Route path="/user-details/:userId" element={<Protected Component={UserDetails} />} />
           <Route path='/thank-you' element={<Thankyou />} />
           <Route path='/s-admin' element={<SAdminProtect Component={SAmdin} />} />
+          <Route path='/not-found' element={<Notfound />} />
           <Route path='*' element={<Notfound />} />
       </Routes>
     </BrowserRouter>
