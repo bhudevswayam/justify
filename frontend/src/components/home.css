@@ -1,0 +1,32 @@
+.home{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+#homeImg{
+    width: 55vw;
+    height: 100vh;
+}
+.home-form{
+    width: 45vw;
+    height: 100vh;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+}
+.home-form label{
+    place-items: left !important;
+}
+.home-form input{
+    width: 250px;
+    height: 40px;
+}
+.home-form textarea{
+    width: 250px;
+    height: 40px;
+    resize: none;
+}
+.link{
+    grid-column: 1/3;
+}

@@ -1,0 +1,106 @@
+/* question.css */
+
+.question {
+    width: 900px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 150px;
+  }
+  
+  .question h2 {
+    color: #333;
+  }
+  #joitext{
+    color: black;
+  }
+  .question label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .question input{
+    height: 50px;
+  }
+  .question textarea{
+    width: 900px;
+    height: 200px;
+    padding: 8px;
+    resize: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .question input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .addTestCase .testCase {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .testCase label{
+    display: grid;
+    grid-template-columns:30% 70%;
+  }
+
+  .addTestCase label {
+    margin-right: 10px;
+  }
+  
+  .addTestCase textarea {
+    width: 430px;
+    height: 60px;
+    flex: 1;
+    margin-right: 60px;
+    resize: none;
+
+  } 
+  #testBtn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+    padding: 15px
+  }
+
+  /* .addTestCase button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .addTestCase button:hover {
+    background-color: #45a049;
+  } */
+  
+  /* .question button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  } */
+  
+  /* .question button:hover {
+    background-color: #0056b3;
+  }
+   */

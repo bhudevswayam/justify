@@ -1,0 +1,34 @@
+.user-details{
+    /* border: 2px solid white; */
+    padding: 25px;
+    display: grid;
+    place-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.user-details h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.main-user-details{
+    width: 80vw;
+    gap: 20px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    /* border: 2px solid white; */
+    box-shadow: 5px 5px 15px black;
+    border-radius: 8px;
+    place-items: left;
+}
+.main-user-details h3 span{
+    color: aliceblue;
+    font-weight: 800;
+}
+.main-user-details h3{
+    padding: 10px;
+    text-align: left;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+}
+.userImgs{
+    grid-column: 1/3;
+}

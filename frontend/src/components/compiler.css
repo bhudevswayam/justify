@@ -1,0 +1,116 @@
+.compiler-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25vw 50vw 25vw ;
+    overflow-x: hidden;
+    border: none;
+}
+.compiler-container .question{
+    padding: 25px;
+    height: 80vh;
+    width: 20vw;
+    overflow-y: scroll;
+    z-index: 25;
+    border: none;
+    box-shadow: 5px 5px 15px black;
+}
+#questionContainer{
+    width: 20vw;
+}
+.question h1{
+    font-size: 20px;
+}
+.code{
+    border: 2px solid #000000;
+    display: grid;
+    
+    grid-template-rows: 10% 90%;
+}
+.code .codeNav{
+    background-color: aquamarine;
+    box-shadow: 5px 5px 15px black;;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    color: #242424;
+    grid-template-columns: 40% 30% 15% 15%;
+}
+#time{
+    font-size: 16px;
+}
+.code .codeNav label{
+    font-weight: 700;
+    font-size: 20px;
+}
+.code .codeNav select{
+    height: 35px;
+    background-color: #242424;
+    color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+}
+.code .codeNav textarea{
+    /* box-shadow: 5px 5px 15px black;
+    background-color: ;
+    border: 0; */
+    resize: none;
+
+}
+.code textarea{
+    resize: none;
+}
+
+.output{
+    display: grid;
+    /* justify-content: center; */
+    place-items: center;
+    border: 2px solid #000000;
+    padding: 25px;
+}::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(95, 158, 160, 0);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+.output textarea{
+    resize: none;
+    height: 250px;
+    width: 300px;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 5px;
+    border: 0;
+    background-color: transparent;
+}
+
+button{
+    color: black;
+    width: 170px;
+    height: 35px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    transition: 0.2s;
+}
+
+button:hover{
+    background-color: transparent;
+    color: aquamarine;
+    border: 1px solid aquamarine;
+}
+
+video{
+    width: 100px;
+    height: 80px;
+    border: 2px solid whitesmoke;
+    background-color: cornflowerblue;
+}
+
+/* x = input()
+
+sum = int(x) ** 2
+
+print(sum) */
