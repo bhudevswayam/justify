@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken')
-
+require('dotenv').config()
 const adminSchema = new mongoose.Schema({
     companyName: String,
     email: {type: String,required: true,unique: true},
@@ -12,7 +12,7 @@ const adminSchema = new mongoose.Schema({
   })
 
 adminSchema.methods.generateAuthToken = function () {
-  const token = jwt.sign({_id:this._id},'My Secret',{expiresIn: '10m'})
+  const token = jwt.sign({_id:this._id},process.env.JWT_TOKEN,{expiresIn: '10m'})
   console.log(token);
   return token
 }
