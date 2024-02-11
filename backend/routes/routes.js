@@ -20,7 +20,7 @@ const verifyToken = (req, res, next) => {
       return res.status(401).json({ message: 'Unauthorized: Missing token' });
     }
   
-    jwt.verify(token.split(' ')[1], process.env.JWT_TOKEN, (err, decoded) => {
+    jwt.verify(token.split(' ')[1], 'My Secret', (err, decoded) => {
       if (err) {
         return res.status(401).json({ message: 'Unauthorized: Invalid token' });
       }
