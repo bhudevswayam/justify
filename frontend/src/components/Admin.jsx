@@ -143,7 +143,7 @@ const Admin = () => {
                 ))}
               </ul>
               {/* <button className='examLink' onClick={generateExamLink}>Generate Exam Link</button> */}
-              <h2 id='examlink'>Exam Link: http://localhost:5173/test?questionid={selectedQuestion._id}</h2>
+              <h2 id='examlink'>Exam Link: https://justifier.netlify.app/test?questionid={selectedQuestion._id}</h2>
             </div>
           )}
         </div>

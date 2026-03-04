@@ -14,13 +14,17 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 
+router.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 const verifyToken = (req, res, next) => {
     const token = req.headers.authorization;
     if (!token) {
       return res.status(401).json({ message: 'Unauthorized: Missing token' });
     }
   
-    jwt.verify(token.split(' ')[1], 'My Secret', (err, decoded) => {
+    jwt.verify(token.split(' ')[1], process.env.JWT_TOKEN, (err, decoded) => {
       if (err) {
         return res.status(401).json({ message: 'Unauthorized: Invalid token' });
       }
@@ -123,7 +127,7 @@ router.post('/compile', async (req, res) => {
     url: 'https://online-code-compiler.p.rapidapi.com/v1/',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '1638b63548msh4199dfbcd8c5262p1674f6jsnfc1514501ce8',
+      'X-RapidAPI-Key': process.env.RAPIDAPI_KEY,
       'X-RapidAPI-Host': 'online-code-compiler.p.rapidapi.com',
     },
     data: {

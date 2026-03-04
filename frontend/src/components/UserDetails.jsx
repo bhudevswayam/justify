@@ -11,6 +11,7 @@ const UserDetails = () => {
   const [userDetails, setUserDetails] = useState(null);
   const [formattedsDate, setFormattedSDate] = useState('');
   const [formattedeDate, setFormattedEDate] = useState('');
+  const [testCasesLength, setTestCasesLength] = useState(0);
   const adminUserId = localStorage.getItem("adminId");
 
   useEffect(() => {
@@ -50,6 +51,7 @@ const UserDetails = () => {
       try {
         const response = await axios.get(`https://apptest-88ck.onrender.com/get-question/${userDetails?.givenQuestion}`);
         setSelectedQuestion(response.data);
+        setTestCasesLength(response.data.testCases.length);
       } catch (error) {
         console.error('Error fetching question:', error.message);
       }
@@ -81,6 +83,7 @@ const UserDetails = () => {
           <h3><span>Exam Start Time: </span>{formattedsDate}</h3>
           <h3><span>Exam End Time: </span>{formattedeDate}</h3>
           <h3><span>Question: </span>{selectedQuestion?.title}</h3>
+          <h3><span>Passed Test Case: </span>{userDetails?.pasedTestCase}/{testCasesLength}</h3>
           <div className='userImgs'>
             <p>User Images</p>
             <Displaypicture userId={userId}/>
